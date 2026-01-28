@@ -59,7 +59,10 @@
                 <div class="col-lg-7">
                     <div class="contact-form-wrapper">
                         <h2 class="mb-4" data-testid="contact-form-heading">Send Us a Message</h2>
-                        <form id="contactForm" data-testid="contact-form">
+                        <form method="POST" action="https://api.web3forms.com/submit">
+                            <input type="hidden" name="access_key" value="2b76e3f5-00cf-44d7-a990-8fd42254dab4">
+                            <input type="hidden" name="subject" value="New Quote Request - Website">
+                            <input type="hidden" name="from_name" value="Diff Forever Pvt Ltd">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -134,7 +137,7 @@
 
                         <div class="contact-info-card mb-4" data-testid="contact-info-phone">
                             <div class="contact-info-icon">
-                                <i class="fas fa-phone-alt"></i>
+                                <i class="fas fa-phone"></i>
                             </div>
                             <div>
                                 <h5>Phone</h5>
@@ -168,7 +171,9 @@
                             </div>
                             <div>
                                 <h5>Address</h5>
-                                <p class="mb-1">123 Main Street<br>Your City, ST 12345</p>
+                                <p class="mb-1">Address Shop no. 1, halai memon masjid, opp. Mhda colony, new mill
+                                    road, kurla west mumbai
+                                    400070</p>
                                 <small class="text-muted">Mon-Fri: 8AM-6PM<br>Sat: 9AM-4PM</small>
                             </div>
                         </div>
@@ -331,7 +336,7 @@
                             </a>
                         </li>
                         <li data-testid="footer-address"><i class="fas fa-map-marker-alt me-2"></i>1
-                            Address Shop no. 1, halai memon masjid, oppo. Mhda colony, new mill road, kurla west mumbai
+                            Address Shop no. 1, halai memon masjid, opp. Mhda colony, new mill road, kurla west mumbai
                             400070
                         </li>
                     </ul>
