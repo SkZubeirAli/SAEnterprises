@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us | SA Enterprises HVAC</title>
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" data-testid="main-navigation">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" data-testid="brand-logo">
+                <img class="header_logo" src="images/sa_logo_nav.png">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                data-testid="navbar-toggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html" data-testid="nav-home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html" data-testid="nav-about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html" data-testid="nav-services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" data-testid="nav-contact">Contact</a>
+                    </li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary ms-lg-3" data-testid="get-quote-btn">Get a Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header" data-testid="page-header">
+        <div class="container">
+            <h1 class="display-4 fw-bold" data-testid="page-title">Contact Us</h1>
+            <p class="lead" data-testid="page-subtitle">We're here to help with all your HVAC needs</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section py-5" data-testid="contact-section">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Contact Form -->
+                <div class="col-lg-7">
+                    <div class="contact-form-wrapper">
+                        <h2 class="mb-4" data-testid="contact-form-heading">Send Us a Message</h2>
+                        <form id="contactForm" data-testid="contact-form">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="firstName" class="form-label" data-testid="label-first-name">First
+                                            Name *</label>
+                                        <input type="text" class="form-control" id="firstName" name="firstName" required
+                                            data-testid="input-first-name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="lastName" class="form-label" data-testid="label-last-name">Last Name
+                                            *</label>
+                                        <input type="text" class="form-control" id="lastName" name="lastName" required
+                                            data-testid="input-last-name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email" class="form-label" data-testid="label-email">Email *</label>
+                                        <input type="email" class="form-control" id="email" name="email" required
+                                            data-testid="input-email">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="phone" class="form-label" data-testid="label-phone">Phone *</label>
+                                        <input type="tel" class="form-control" id="phone" name="phone" required
+                                            data-testid="input-phone">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="service" class="form-label" data-testid="label-service">Service
+                                            Needed *</label>
+                                        <select class="form-select" id="service" name="service" required
+                                            data-testid="select-service">
+                                            <option value="">Select a service...</option>
+                                            <option value="installation">Installation</option>
+                                            <option value="repair">Repair</option>
+                                            <option value="maintenance">Maintenance</option>
+                                            <option value="emergency">Emergency Service</option>
+                                            <option value="consultation">Consultation</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="message" class="form-label" data-testid="label-message">Message
+                                            *</label>
+                                        <textarea class="form-control" id="message" name="message" rows="5" required
+                                            data-testid="textarea-message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100"
+                                        data-testid="submit-form-btn">
+                                        <i class="fas fa-paper-plane me-2"></i>Send Message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="formMessage" class="mt-3" data-testid="form-message"></div>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-5">
+                    <div class="contact-info-wrapper">
+                        <h2 class="mb-4" data-testid="contact-info-heading">Get In Touch</h2>
+
+                        <div class="contact-info-card mb-4" data-testid="contact-info-phone">
+                            <div class="contact-info-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h5>Phone</h5>
+                                <p class="mb-1">
+                                    <a href="tel:+91-9619122580" class="footer_contact">
+                                        <i class="fas fa-phone me-2"></i>+91-9619122580
+                                    </a>
+                                </p>
+                                <small class="text-muted">24/7 Emergency Service</small>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-card mb-4" data-testid="contact-info-email">
+                            <div class="contact-info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h5>Email</h5>
+                                <p class="mb-1">
+                                    <a href="mailto:al.saud720@gmail.com" rel="noopener noreferrer">
+                                        <i class="fas fa-envelope me-2"></i>al.saud720@gmail.com
+                                    </a>
+                                </p>
+                                <small class="text-muted">Response within 24 hours</small>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-card mb-4" data-testid="contact-info-address">
+                            <div class="contact-info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h5>Address</h5>
+                                <p class="mb-1">123 Main Street<br>Your City, ST 12345</p>
+                                <small class="text-muted">Mon-Fri: 8AM-6PM<br>Sat: 9AM-4PM</small>
+                            </div>
+                        </div>
+
+                        <div class="emergency-banner" data-testid="emergency-banner">
+                            <div class="d-flex align-items-center">
+                                <div class="emergency-icon">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Emergency Service?</h5>
+                                    <p class="mb-2">Call us immediately for urgent issues</p>
+                                    <a href="tel:+1234567890" class="btn btn-light btn-sm"
+                                        data-testid="emergency-call-btn">
+                                        <i class="fas fa-phone-alt me-2"></i>Call Now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section (Placeholder) -->
+    <section class="map-section" data-testid="map-section">
+        <div class="container-fluid p-0">
+            <div class="map-placeholder" data-testid="map-placeholder">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093743!2d144.9537353159042!3d-37.81720974201446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sau!4v1566526096781!5m2!1sen!2sau"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section py-5" data-testid="faq-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3" data-testid="faq-heading">Frequently Asked Questions</h2>
+                <p class="lead text-muted" data-testid="faq-subheading">Quick answers to common questions</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item" data-testid="faq-item-1">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq1" data-testid="faq-button-1">
+                                    What areas do you service?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" data-testid="faq-answer-1">
+                                    We service all areas within a 50-mile radius including Downtown, North District,
+                                    South District, East Valley, West Hills, and surrounding suburban areas. Contact us
+                                    to confirm service availability in your specific location.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-testid="faq-item-2">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq2" data-testid="faq-button-2">
+                                    Do you offer emergency services?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" data-testid="faq-answer-2">
+                                    Yes! We offer 24/7 emergency HVAC services, 365 days a year. Our average response
+                                    time is under 2 hours for emergency calls. Simply call our emergency hotline at
+                                    (123) 456-7890.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-testid="faq-item-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq3" data-testid="faq-button-3">
+                                    How much does a typical service cost?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" data-testid="faq-answer-3">
+                                    Costs vary depending on the service needed. We offer free consultations and upfront
+                                    pricing with no hidden fees. Contact us for a detailed quote based on your specific
+                                    needs.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-testid="faq-item-4">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq4" data-testid="faq-button-4">
+                                    Are your technicians certified?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" data-testid="faq-answer-4">
+                                    Yes, all our technicians are EPA certified, NATE certified, licensed, and insured.
+                                    We maintain ongoing training to ensure our team stays current with the latest HVAC
+                                    technologies and best practices.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5" data-testid="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4 class="mb-3" data-testid="footer-brand"><img src="images/favicon.png" alt=""
+                            class="footer_logo">SA Enterprises HVAC
+                    </h4>
+                    <p class="text-muted" data-testid="footer-description">Professional heating and cooling solutions
+                        for over 20 years. Your comfort is our priority.</p>
+                    <div class="social-links mt-3">
+                        <a href="#" data-testid="social-facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" data-testid="social-twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" data-testid="social-instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" data-testid="social-linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="mb-3" data-testid="footer-links-heading">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html" data-testid="footer-link-home">Home</a></li>
+                        <li><a href="about.html" data-testid="footer-link-about">About</a></li>
+                        <li><a href="services.html" data-testid="footer-link-services">Services</a></li>
+                        <li><a href="contact.html" data-testid="footer-link-contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="mb-3" data-testid="footer-services-heading">Services</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="services.html" data-testid="footer-service-installation">AC Installation</a></li>
+                        <li><a href="services.html" data-testid="footer-service-repair">HVAC Repair</a></li>
+                        <li><a href="services.html" data-testid="footer-service-maintenance">Maintenance</a></li>
+                        <li><a href="services.html" data-testid="footer-service-emergency">Emergency Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-3" data-testid="footer-contact-heading">Contact Info</h5>
+                    <ul class="list-unstyled footer-contact">
+                        <li data-testid="footer-phone">
+                            <a href="tel:+91-9619122580" class="footer_contact">
+                                <i class="fas fa-phone me-2"></i>+91-9619122580
+                            </a>
+                        </li>
+                        <li data-testid="footer-email">
+                            <a class="footer_contact" href="mailto:al.saud720@gmail.com" rel="noopener noreferrer">
+                                <i class="fas fa-envelope me-2"></i>al.saud720@gmail.com
+                            </a>
+                        </li>
+                        <li data-testid="footer-address"><i class="fas fa-map-marker-alt me-2"></i>1
+                            Address Shop no. 1, halai memon masjid, oppo. Mhda colony, new mill road, kurla west mumbai
+                            400070
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
+            <div class="text-center text-muted">
+                <p class="mb-0" data-testid="footer-copyright">&copy; 2024 SA Enterprises HVAC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
