@@ -86,6 +86,60 @@ function showMessage(message, type) {
     }, 5000);
 }
 
+
+// industries slider
+const industriesSwiper = new Swiper('.industriesSwiper', {
+    loop: true,
+    spaceBetween: 20,
+    grabCursor: true,
+    autoplay: {
+        delay: 3500,
+        disableOnInteraction: false
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1
+        },
+        576: {
+            slidesPerView: 2
+        },
+        992: {
+            slidesPerView: 4
+        }
+    }
+});
+
+
+// testimonials slider
+const testimonialSwiper = new Swiper('.testimonialSwiper', {
+    loop: true,
+    spaceBetween: 20,
+    grabCursor: true,
+    autoplay: {
+        delay: 4500,
+        disableOnInteraction: false
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1
+        },
+        768: {
+            slidesPerView: 2
+        },
+        992: {
+            slidesPerView: 3
+        }
+    }
+});
+
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^=\"#\"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -181,4 +235,58 @@ phoneInputs.forEach(input => {
 
 // Console log for debugging
 console.log('CoolAir HVAC Website - JavaScript Loaded Successfully');
-console.log('Current Page:', currentLocation); 
+console.log('Current Page:', currentLocation);
+
+document.addEventListener("scroll", function () {
+
+    const backToTop = document.getElementById("backToTop");
+
+    if (!backToTop) return;
+
+    const scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+
+    if (scrollTop > 200) {
+        backToTop.classList.add("show");
+    } else {
+        backToTop.classList.remove("show");
+    }
+});
+
+document.addEventListener("click", function (e) {
+
+    if (e.target.closest("#backToTop")) {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+
+});
+
+
+window.addEventListener("scroll", function () {
+
+    const header = document.getElementById("siteHeader");
+
+    if (window.scrollY > 150) {
+        header.classList.add("show");
+    } else {
+        header.classList.remove("show");
+    }
+
+});
+
+
+fetch("/partials/header.html")
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("header").innerHTML = data;
+        initMobileMenu(); // âœ… NOW events attach after header exists
+    });
+
+fetch("/partials/footer.html")
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("footer").innerHTML = data;
+    });

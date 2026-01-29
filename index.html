@@ -7,306 +7,404 @@
     <title>Home | SA Enterprises HVAC</title>
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" href="favicon.png" type="image/png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header>
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" data-testid="main-navigation">
+
+    <div id="header"></div>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" data-testid="hero-section">
+            <div class="hero-overlay"></div>
             <div class="container">
-                <a class="navbar-brand" href="index.html" data-testid="brand-logo">
-                    <img class="header_logo" src="images/sa_logo_nav.png">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    data-testid="navbar-toggler">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html" data-testid="nav-home">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html" data-testid="nav-about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="services.html" data-testid="nav-services">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html" data-testid="nav-contact">Contact</a>
-                        </li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary ms-lg-3" data-testid="get-quote-btn">Get a Quote</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <!-- Hero Section -->
-    <section class="hero-section" data-testid="hero-section">
-        <div class="hero-overlay"></div>
-        <div class="container">
-            <div class="row align-items-center ">
-                <div class="col-lg-7">
-                    <div class="hero-content">
-                        <h1 class="display-3 fw-bold mb-4 animate-fade-in" data-testid="hero-title">
-                            Expert HVAC Solutions for Your Comfort
-                        </h1>
-                        <p class="lead mb-5 animate-fade-in-delay" data-testid="hero-subtitle">
-                            24/7 Emergency Service • Licensed & Insured • Over 20 Years Experience
-                        </p>
-                        <div class="d-flex flex-wrap gap-3 animate-fade-in-delay-2">
-                            <a href="contact.html" class="btn btn-primary btn-lg" data-testid="schedule-service-btn">
-                                <i class="fas fa-calendar-check me-2"></i>Schedule Service
-                            </a>
-                            <a href="tel:+91-9619122580" class="btn btn-outline-light btn-lg"
-                                data-testid="emergency-call-btn">
-                                <i class="fas fa-phone me-2"></i>+91-9619122580
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features-section " data-testid="features-section">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="feature-card" data-testid="feature-24-7">
-                        <div class="feature-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <h3>24/7 Emergency Service</h3>
-                        <p>We're always available when you need us most. Round-the-clock emergency HVAC repairs.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-card" data-testid="feature-certified">
-                        <div class="feature-icon">
-                            <i class="fas fa-certificate"></i>
-                        </div>
-                        <h3>Certified Technicians</h3>
-                        <p>Our team consists of licensed, trained, and experienced HVAC professionals.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-card" data-testid="feature-warranty">
-                        <div class="feature-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>Satisfaction Guaranteed</h3>
-                        <p>We stand behind our work with comprehensive warranties and quality guarantees.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Overview -->
-    <section class="services-overview " data-testid="services-overview-section">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold mb-3" data-testid="services-heading">Our Services</h2>
-                <p class="lead text-muted" data-testid="services-subheading">Comprehensive HVAC solutions for
-                    residential and commercial properties</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6">
-                    <div class="service-card" data-testid="service-installation">
-                        <div class="service-icon">
-                            <i class="fas fa-tools"></i>
-                        </div>
-                        <h4>Installation</h4>
-                        <p>Professional installation of new HVAC systems with proper sizing and efficiency.</p>
-                        <a href="services.html" class="service-link" data-testid="learn-more-installation">Learn More <i
-                                class="fas fa-arrow-right ms-2"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="service-card" data-testid="service-repair">
-                        <div class="service-icon">
-                            <i class="fas fa-wrench"></i>
-                        </div>
-                        <h4>Repair</h4>
-                        <p>Fast and reliable repairs for all makes and models of HVAC equipment.</p>
-                        <a href="services.html" class="service-link" data-testid="learn-more-repair">Learn More <i
-                                class="fas fa-arrow-right ms-2"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="service-card" data-testid="service-maintenance">
-                        <div class="service-icon">
-                            <i class="fas fa-clipboard-check"></i>
-                        </div>
-                        <h4>Maintenance</h4>
-                        <p>Regular maintenance plans to keep your system running efficiently year-round.</p>
-                        <a href="services.html" class="service-link" data-testid="learn-more-maintenance">Learn More <i
-                                class="fas fa-arrow-right ms-2"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="service-card" data-testid="service-emergency">
-                        <div class="service-icon">
-                            <i class="fas fa-ambulance"></i>
-                        </div>
-                        <h4>Emergency</h4>
-                        <p>24/7 emergency service for urgent heating and cooling system failures.</p>
-                        <a href="services.html" class="service-link" data-testid="learn-more-emergency">Learn More <i
-                                class="fas fa-arrow-right ms-2"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section class="why-choose-section " data-testid="why-choose-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h2 class="display-5 fw-bold mb-4" data-testid="why-choose-heading">Why Choose SA Enterprises HVAC?
-                    </h2>
-                    <div class="why-item mb-4" data-testid="why-item-experience">
-                        <div class="d-flex">
-                            <div class="why-number">20+</div>
-                            <div>
-                                <h4>Years of Experience</h4>
-                                <p>Two decades of excellence in HVAC installation, repair, and maintenance services.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="why-item mb-4" data-testid="why-item-customers">
-                        <div class="d-flex">
-                            <div class="why-number">100+</div>
-                            <div>
-                                <h4>Satisfied Customers</h4>
-                                <p>Thousands of happy clients trust us with their heating and cooling needs.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="why-item" data-testid="why-item-response">
-                        <div class="d-flex">
-                            <div class="why-number">
-                                2hr</div>
-                            <div>
-                                <h4>Response Time</h4>
-                                <p>Fast emergency response to get your system back up and running quickly.</p>
+                <div class="row align-items-center ">
+                    <div class="col-lg-7">
+                        <div class="hero-content">
+                            <h1 class="display-3 fw-bold mb-4 animate-fade-in" data-testid="hero-title">
+                                Expert HVAC Solutions for Your Comfort
+                            </h1>
+                            <p class="lead mb-5 animate-fade-in-delay" data-testid="hero-subtitle">
+                                24/7 Emergency Service • Licensed & Insured • Over 20 Years Experience
+                            </p>
+                            <div class="d-flex flex-wrap gap-3 animate-fade-in-delay-2">
+                                <a href="contact.html" class="btn btn-primary btn-lg"
+                                    data-testid="schedule-service-btn">
+                                    <i class="fas fa-calendar-check me-2"></i>Schedule Service
+                                </a>
+                                <a href="tel:+91-9619122580" class="btn btn-outline-light btn-lg"
+                                    data-testid="emergency-call-btn">
+                                    <i class="fas fa-phone me-2"></i>+91-9619122580
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="stats-grid">
-                        <div class="stat-card" data-testid="stat-warranty">
-                            <i class="fas fa-award"></i>
-                            <h3>100%</h3>
-                            <p>Satisfaction Rate</p>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section " data-testid="features-section">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="feature-card" data-testid="feature-24-7">
+                            <div class="feature-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h3>24/7 Emergency Service</h3>
+                            <p>We're always available when you need us most. Round-the-clock emergency HVAC repairs.</p>
                         </div>
-                        <div class="stat-card" data-testid="stat-licensed">
-                            <i class="fas fa-id-card"></i>
-                            <h3>Licensed</h3>
-                            <p>& Insured</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-card" data-testid="feature-certified">
+                            <div class="feature-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <h3>Certified Technicians</h3>
+                            <p>Our team consists of licensed, trained, and experienced HVAC professionals.</p>
                         </div>
-                        <div class="stat-card" data-testid="stat-available">
-                            <i class="fas fa-headset"></i>
-                            <h3>24/7</h3>
-                            <p>Available</p>
-                        </div>
-                        <div class="stat-card" data-testid="stat-eco">
-                            <i class="fas fa-leaf"></i>
-                            <h3>Eco</h3>
-                            <p>Friendly</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-card" data-testid="feature-warranty">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Satisfaction Guaranteed</h3>
+                            <p>We stand behind our work with comprehensive warranties and quality guarantees.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section " data-testid="cta-section">
-        <div class="container">
-            <div class="cta-content text-center">
-                <h2 class="display-5 fw-bold text-white mb-4" data-testid="cta-heading">Ready to Experience Ultimate
-                    Comfort?</h2>
-                <p class="lead text-white mb-5" data-testid="cta-text">Get in touch with us today for a free
-                    consultation and quote</p>
-                <a href="contact.html" class="btn btn-light btn-lg" data-testid="cta-contact-btn">
-                    <i class="fas fa-envelope me-2"></i>Contact Us Now
-                </a>
+        <!-- industries we serve -->
+        <section class="industries-slider">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-12 section_heading_div pb-md-0 pb-4">
+                        <h2 class="text-md-start text-center text-light">Industries We Serve</h2>
+                    </div>
+                    <div class="col-md-6 text-end d-md-block d-none">
+                        <div class="contact">
+                            <a href="services.html" class="learn_more_btn"><i class="fa fa-arrow-right"></i> Read More
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="swiper industriesSwiper">
+                        <div class="swiper-wrapper py-md-3">
+
+                            <div class="swiper-slide">
+                                <div class="industry-card">
+                                    <img src="images/commercial_building.jpg" alt="Commercial">
+                                    <h6>Commercial Buildings</h6>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="industry-card">
+                                    <img src="images/residential_building.jpg" alt="Residential">
+                                    <h6>Residential Projects</h6>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="industry-card">
+                                    <img src="images/shopping_mall.jpg" alt="Shopping Mall">
+                                    <h6>Shopping Mall</h6>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="industry-card">
+                                    <img src="images/industrial_building.jpg" alt="Industrial">
+                                    <h6>Industrial Facilities</h6>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="industry-card">
+                                    <img src="images/hospital.jpg" alt="Hospitals">
+                                    <h6>Hospitals & Healthcare</h6>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="industry-card">
+                                    <img src="images/shopping_mall.jpg" alt="Shopping Mall">
+                                    <h6>Malls & Retail</h6>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- <div class="swiper-pagination"></div> -->
+                    </div>
+
+                    <div class="col-12 text-center d-md-none d-block pt-4">
+                        <div class="contact">
+                            <a href="services.html" class="learn_more_btn"><i class="fa fa-arrow-right"></i> Read More
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer py-5" data-testid="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4 mb-lg-0">
-                    <img src="images/favicon.png" alt="footer logo" class="footer_logo">
-                    <h4 class="mb-1" data-testid="footer-brand"> SA Enterprises HVAC
-                    </h4>
-                    <p class=" " data-testid="footer-description">Professional heating and cooling solutions
-                        for over 20 years. Your comfort is our priority.</p>
-                    <div class="social-links mt-3">
-                        <a href="#" data-testid="social-facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" data-testid="social-twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" data-testid="social-instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" data-testid="social-linkedin"><i class="fab fa-linkedin-in"></i></a>
+        <!-- Services Overview -->
+        <section class="services-overview " data-testid="services-overview-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3" data-testid="services-heading">Our Services</h2>
+                    <p class="lead text-muted" data-testid="services-subheading">Comprehensive HVAC solutions for
+                        residential and commercial properties</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="service-card" data-testid="service-installation">
+                            <div class="service-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <h4>Installation</h4>
+                            <p>Professional installation of new HVAC systems with proper sizing and efficiency.</p>
+                            <a href="services.html" class="service-link" data-testid="learn-more-installation">Learn
+                                More <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="service-card" data-testid="service-repair">
+                            <div class="service-icon">
+                                <i class="fas fa-wrench"></i>
+                            </div>
+                            <h4>Repair</h4>
+                            <p>Fast and reliable repairs for all makes and models of HVAC equipment.</p>
+                            <a href="services.html" class="service-link" data-testid="learn-more-repair">Learn More <i
+                                    class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="service-card" data-testid="service-maintenance">
+                            <div class="service-icon">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                            <h4>Maintenance</h4>
+                            <p>Regular maintenance plans to keep your system running efficiently year-round.</p>
+                            <a href="services.html" class="service-link" data-testid="learn-more-maintenance">Learn More
+                                <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="service-card" data-testid="service-emergency">
+                            <div class="service-icon">
+                                <i class="fas fa-ambulance"></i>
+                            </div>
+                            <h4>Emergency</h4>
+                            <p>24/7 emergency service for urgent heating and cooling system failures.</p>
+                            <a href="services.html" class="service-link" data-testid="learn-more-emergency">Learn More
+                                <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-                    <h5 class="mb-3" data-testid="footer-links-heading">Quick Links</h5>
-                    <ul class="list-unstyled footer-links">
-                        <li><a href="index.html" data-testid="footer-link-home">Home</a></li>
-                        <li><a href="about.html" data-testid="footer-link-about">About</a></li>
-                        <li><a href="services.html" data-testid="footer-link-services">Services</a></li>
-                        <li><a href="contact.html" data-testid="footer-link-contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                    <h5 class="mb-3" data-testid="footer-services-heading">Services</h5>
-                    <ul class="list-unstyled footer-links">
-                        <li><a href="services.html" data-testid="footer-service-installation">AC Installation</a></li>
-                        <li><a href="services.html" data-testid="footer-service-repair">HVAC Repair</a></li>
-                        <li><a href="services.html" data-testid="footer-service-maintenance">Maintenance</a></li>
-                        <li><a href="services.html" data-testid="footer-service-emergency">Emergency Service</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="mb-3" data-testid="footer-contact-heading">Contact Info</h5>
-                    <ul class="list-unstyled footer-contact">
-                        <li data-testid="footer-phone">
-                            <a href="tel:+91-9619122580" class="footer_contact">
-                                <i class="fas fa-phone me-2"></i>+91-9619122580
-                            </a>
-                        </li>
-                        <li data-testid="footer-email">
-                            <a class="footer_contact" href="mailto:al.saud720@gmail.com" rel="noopener noreferrer">
-                                <i class="fas fa-envelope me-2"></i>al.saud720@gmail.com
-                            </a>
-                        </li>
-                        <li data-testid="footer-address"><i class="fas fa-map-marker-alt me-2"></i>1
-                            Address Shop no. 1, halai memon masjid, oppo. Mhda colony, new mill road, kurla west mumbai
-                            400070
-                        </li>
-                    </ul>
-                </div>
             </div>
-            <hr class="my-4 border-secondary">
-            <div class="text-center">
-                <p class="mb-0" data-testid="footer-copyright">&copy; 2024 SA Enterprises HVAC. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+        </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+        <!-- Why Choose Us -->
+        <section class="why-choose-section " data-testid="why-choose-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h2 class="display-5 fw-bold mb-4" data-testid="why-choose-heading">Why Choose SA Enterprises
+                            HVAC?
+                        </h2>
+                        <div class="why-item mb-4" data-testid="why-item-experience">
+                            <div class="d-flex align-items-center">
+                                <div class="why-number">20+</div>
+                                <div>
+                                    <h4>Years of Experience</h4>
+                                    <p>Two decades of excellence in HVAC installation, repair, and maintenance services.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why-item mb-4" data-testid="why-item-customers">
+                            <div class="d-flex align-items-center">
+                                <div class="why-number">100+</div>
+                                <div>
+                                    <h4>Satisfied Customers</h4>
+                                    <p>Thousands of happy clients trust us with their heating and cooling needs.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why-item" data-testid="why-item-response">
+                            <div class="d-flex align-items-center">
+                                <div class="why-number">
+                                    2hr</div>
+                                <div>
+                                    <h4>Response Time</h4>
+                                    <p>Fast emergency response to get your system back up and running quickly.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="stats-grid">
+                            <div class="stat-card" data-testid="stat-warranty">
+                                <i class="fas fa-award"></i>
+                                <h3>100%</h3>
+                                <p>Satisfaction Rate</p>
+                            </div>
+                            <div class="stat-card" data-testid="stat-licensed">
+                                <i class="fas fa-id-card"></i>
+                                <h3>Licensed</h3>
+                                <p>& Insured</p>
+                            </div>
+                            <div class="stat-card" data-testid="stat-available">
+                                <i class="fas fa-headset"></i>
+                                <h3>24/7</h3>
+                                <p>Available</p>
+                            </div>
+                            <div class="stat-card" data-testid="stat-eco">
+                                <i class="fas fa-leaf"></i>
+                                <h3>Eco</h3>
+                                <p>Friendly</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- testimonials section -->
+        <section class="testimonial-section py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Client Reviews</h2>
+
+                <div class="swiper testimonialSwiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-box">
+                                <p class="review-text">
+                                    "SA Enterprises provided outstanding HVAC installation
+                                    services. The team was professional, punctual, and highly skilled.”
+                                </p>
+
+                                <div class="review-meta">
+                                    <div class="stars">
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="reviewer">
+                                        <em>Rashid Khan</em>
+                                        <span class="review_date">March 2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-box">
+                                <p class="review-text">
+                                    “Excellent AC ducting work with clean execution and proper finishing.
+                                    The system performance has been very efficient.”
+                                </p>
+
+                                <div class="review-meta">
+                                    <div class="stars">
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="reviewer">
+                                        <em>Imran Shaikh</em>
+                                        <span class="review_date">January 2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-box">
+                                <p class="review-text">
+                                    “Reliable maintenance services and quick response.
+                                    Very satisfied with their professionalism and support.”
+                                </p>
+
+                                <div class="review-meta">
+                                    <div class="stars">
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="reviewer">
+                                        <em>Sameer Patel</em>
+                                        <span class="review_date">December 2024</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-box">
+                                <p class="review-text">
+                                    “High-quality workmanship and excellent coordination
+                                    throughout the HVAC project. Highly recommended.”
+                                </p>
+
+                                <div class="review-meta">
+                                    <div class="stars">
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <div class="reviewer">
+                                        <em>Arif Ansari</em>
+                                        <span class="review_date">November 2024</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- <div class="swiper-pagination"></div> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section " data-testid="cta-section">
+            <div class="container">
+                <div class="cta-content text-center">
+                    <h2 class="display-5 fw-bold text-white mb-4" data-testid="cta-heading">Ready to Experience Ultimate
+                        Comfort?</h2>
+                    <p class="lead text-white mb-5" data-testid="cta-text">Get in touch with us today for a free
+                        consultation and quote</p>
+                    <a href="contact.html" class="btn btn-light btn-lg" data-testid="cta-contact-btn">
+                        <i class="fas fa-envelope me-2"></i>Contact Us Now
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="footer"></div>
+    <script src="js/bootstrap-bundle.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
