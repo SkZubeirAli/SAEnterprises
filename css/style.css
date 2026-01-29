@@ -898,9 +898,9 @@ header {
 
 @media (max-width: 767px) {
 
-    .navbar {
+    /* .navbar {
         width: 98%;
-    }
+    } */
 
     .hero-content h1 {
         font-size: 2rem;
