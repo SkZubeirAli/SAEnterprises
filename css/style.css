@@ -390,6 +390,22 @@ header {
     margin-bottom: 0.5rem;
 }
 
+/* client section */
+
+.brand_img {
+    width: 100%;
+    height: 250px;
+    object-fit: fill;
+    filter: grayscale(100%);
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.brand_img:hover {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
 /* CTA Section */
 .cta-section {
     background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 50%, var(--accent-color) 100%);
